@@ -11,6 +11,7 @@
 	<groupId>co.simplon</groupId>
 	<artifactId>brief-architecture</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>brief-architecture</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
@@ -29,6 +30,11 @@
 	<properties>
 		<java.version>21</java.version>
 	</properties>
+	<modules>
+		<module>brief-persistence</module>
+		<module>brief-business</module>
+		<module>brief-presentation</module>
+	</modules>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
