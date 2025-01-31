@@ -41,9 +41,34 @@ CREATE TABLE products_shopping_carts (
     FOREIGN KEY (cart_id) REFERENCES shopping_carts(cart_id)
 );
 
--- Ajout des contraintes pour assurer la relation 1-1 entre products et stocks
-ALTER TABLE products
-ADD CONSTRAINT fk_product_stock
-FOREIGN KEY (product_id) REFERENCES stocks(stock_id);
 
+-- Insertion des données dans la table products
+INSERT INTO products (product_name, product_description, product_price) VALUES
+    ('Ordinateur portable', 'Ordinateur portable haute performance', 999.99),
+    ('Smartphone', 'Smartphone dernière génération', 699.99),
+    ('Tablette', 'Tablette tactile 10 pouces', 299.99),
+    ('Casque audio', 'Casque audio sans fil', 149.99),
+    ('Souris gaming', 'Souris gaming RGB', 79.99);
 
+-- Insertion des données dans la table stocks
+INSERT INTO stocks (product_stock, product_id) VALUES
+    (50, 1),
+    (100, 2),
+    (75, 3),
+    (200, 4),
+    (150, 5);
+
+-- Insertion des données dans la table shopping_carts
+INSERT INTO shopping_carts (product_quantity) VALUES
+    (3),
+    (2),
+    (4);
+
+-- Insertion des données dans la table de jointure products_shopping_carts
+INSERT INTO products_shopping_carts (product_id, cart_id, quantity) VALUES
+    (1, 1, 1),
+    (2, 1, 2),
+    (3, 2, 1),
+    (4, 2, 1),
+    (5, 3, 2),
+    (1, 3, 2);
