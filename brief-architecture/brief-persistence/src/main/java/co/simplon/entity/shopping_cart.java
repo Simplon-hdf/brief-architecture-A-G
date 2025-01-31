@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "shopping_carts")
 
-public class shopping_carts {
+public class shopping_cart {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
 @Column(name = "shopping_cart_id")
@@ -47,7 +47,7 @@ public void setProductQuantity(int productQuantity) {
 
 @Override
 public String toString() {
-    return "shopping_carts{" +
+    return "shopping_cart{" +
             "shoppingCartId=" + shoppingCartId +
             ", productQuantity=" + productQuantity +
             '}';
