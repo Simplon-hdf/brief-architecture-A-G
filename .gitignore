@@ -25,3 +25,6 @@ replay_pid*
 
 # Cursor rules
 .cursorrules
+brief-architecture/brief-presentation/src/main/resources/secrets.properties
+brief-architecture/brief-business/src/main/resources/secrets.properties
+brief-architecture/brief-persistence/src/main/resources/secrets.properties
