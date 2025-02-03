@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 
 import co.simplon.dto.ProductDTO;
 import co.simplon.service.ProductService;
+import io.swagger.v3.oas.annotations.Operation;
+
 
 @RestController
 @RequestMapping("/api/products")
@@ -19,6 +21,7 @@ public class ProductController {
     private ProductService productService;
 
     // Créer un nouveau produit
+    @Operation(summary = "Créer un nouveau produit", description = "Création d'un nouveau produit")
     @PostMapping
     public ResponseEntity<ProductDTO> createProduct(@RequestBody ProductDTO productDTO) {
         ProductDTO createdProduct = productService.createProduct(productDTO);
