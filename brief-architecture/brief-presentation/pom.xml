@@ -4,28 +4,22 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.2</version>
-        <relativePath/>
+        <groupId>co.simplon</groupId>
+        <artifactId>brief-architecture</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     
-    <groupId>co.simplon</groupId>
     <artifactId>brief-presentation</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>brief-presentation</name>
     <description>Couche presentation pour le brief architecture</description>
-    
-    <properties>
-        <java.version>17</java.version>
-    </properties>
     
     <dependencies>
         <!-- Dépendance vers le module business -->
         <dependency>
             <groupId>co.simplon</groupId>
             <artifactId>brief-business</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         
         <!-- Spring Boot Starter Web -->
@@ -45,13 +39,6 @@
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.3.0</version>
-        </dependency>
-        
-        <!-- Spring Boot Starter Test -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
     </dependencies>
     
