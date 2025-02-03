@@ -19,7 +19,8 @@
         <dependency>
             <groupId>co.simplon</groupId>
             <artifactId>brief-persistence</artifactId>
-            <version>${project.version}</version>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
         
         <!-- Spring Boot Starter -->
