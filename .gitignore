@@ -25,3 +25,6 @@ replay_pid*
 
 # Cursor rules
 .cursorrules
+
+.env
+**/secrets.properties
